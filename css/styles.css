@@ -1,0 +1,924 @@
+:root {
+    --primary-brand-color: #4D5AE5;
+    --pressed-state-color: #404BBF;
+    --dark-color: #2E2F42;
+    --success-color: #31D0AA;
+    --text-color: #434455;
+    --subtle-text-color: #8E8F99;
+    --accent-color: #E7E9FC;
+    --light-color: #F4F4FD;
+    --modal-overlay-color: rgba(46, 47, 66, 0.4);
+    --hero-background-color: rgba(46, 47, 66, 0.7);
+    --white-background-color: #FFFFFF;
+    --modal-background-color: #FCFCFC;
+
+    --typical-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/** Body style */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white-background-color);
+}
+
+/** Container */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1158px;
+}
+
+/** Delete text decoration */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+/**=============== Text style guide ===============*/
+/** Header 1 */
+.hero-title {
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 496px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--white-background-color);
+}
+
+/** Header 2 */
+.features-title,
+.work-title,
+.team-title,
+.customer-title {
+    margin-bottom: 72px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--dark-color);
+}
+
+/** Header 3 */
+.features-name,
+.team-name,
+.category-name {
+    margin-bottom: 8px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--dark-color);
+}
+
+/** Body text style */
+.contact-link,
+.text,
+.footer-slogan {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+/**=============== Additional styles ===============*/
+/** Additional class for sections  */
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/** Additional hidden class  */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/** Global style for buttons */
+button {
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+/** Style for socials in team and footer section  */
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--primary-brand-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+/** Color for social icons */
+.social-icon {
+    fill: var(--light-color);
+}
+
+/**=============== Header section ===============*/
+header {
+    border-bottom: 1px solid var(--accent-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+/** Logo style in the header */
+.logo-link {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-brand-color);
+}
+
+.header .logo-link {
+    margin-right: 76px;
+}
+
+/** Color for logo (tag span) */
+.header-span {
+    color: var(--dark-color);
+}
+
+/** Navigation style */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    position: relative;
+
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--dark-color);
+
+    transition: color var(--typical-transition);
+}
+
+/** Current page style */
+.current {
+    color: var(--pressed-state-color);
+}
+
+.current::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--pressed-state-color);
+}
+
+/** Contacts style */
+.contacts-list {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    transition: color var(--typical-transition);
+}
+
+/** Hover and focus for header */
+.nav-link:hover,
+.nav-link:focus,
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--pressed-state-color);
+}
+
+/**=============== Hero section ===============*/
+.hero {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 188px;
+    padding-bottom: 188px;
+
+    background-color: var(--dark-color);
+    background-image: linear-gradient(to right,
+            var(--hero-background-color),
+            var(--hero-background-color)),
+        url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero>.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Button in hero section */
+.hero-button {
+    padding: 16px 32px;
+
+    min-width: 169px;
+    min-height: 56px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary-brand-color);
+    color: var(--white-background-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+/** Hover and focus for button in hero section */
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--pressed-state-color);
+}
+
+/**=============== Features section ===============*/
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.features-item {
+    flex-basis: calc((100% - 72px)/4);
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-radius: 4px;
+    background-color: var(--light-color);
+}
+
+/**=============== Work section ===============*/
+.work {
+    padding-top: 0;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.work-item {
+    flex-basis: calc((100% - 48px)/3);
+}
+
+/**=============== Team section ===============*/
+.team {
+    background-color: var(--light-color);
+}
+
+/** Style for cards in team section */
+.team-list {
+    display: flex;
+    gap: 24px;
+}
+
+.team-item {
+    height: 100%;
+    flex-grow: 1;
+    text-align: center;
+    flex-basis: calc((100% - 72px)/4);
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    background-color: var(--white-background-color);
+}
+
+.team-text {
+    margin-bottom: 8px;
+}
+
+.team-card {
+    padding-top: 32px;
+    padding-right: 16px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+}
+
+.team-item .social-list {
+    display: flex;
+    gap: 24px;
+}
+
+/** Hover and focus for socials in team section */
+.social-link.social-team:hover,
+.social-link.social-team:focus {
+    background-color: var(--pressed-state-color);
+}
+
+/**=============== Customers section ===============*/
+.customer-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.customer-item {
+    flex-basis: calc((100% - 72px)/6);
+}
+
+.customer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: 1px solid var(--subtle-text-color);
+    border-radius: 4px;
+
+    transition: border-color var(--typical-transition);
+}
+
+/** Hover and focus for border in customers section */
+.customer-link:hover,
+.customer-link:focus {
+    border-color: var(--pressed-state-color);
+}
+
+.customer-icon {
+    display: flex;
+    fill: var(--subtle-text-color);
+
+    transition: fill var(--typical-transition);
+}
+
+/** Hover and focus for icons in customers section */
+.customer-link:hover .customer-icon,
+.customer-link:focus .customer-icon {
+    fill: var(--pressed-state-color);
+}
+
+/**=============== Filter section ===============*/
+.filter {
+    padding-top: 96px;
+}
+
+.filter-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+    gap: 24px;
+}
+
+/** Button in filter section */
+.filter-button {
+    padding: 12px 24px;
+
+    border-color: var(--accent-color);
+    background-color: var(--light-color);
+    color: var(--primary-brand-color);
+
+    transition:
+        color var(--typical-transition),
+        border-color var(--typical-transition),
+        box-shadow var(--typical-transition),
+        background-color var(--typical-transition);
+}
+
+/** Hover and focus for button in filter section */
+.filter-button:hover,
+.filter-button:focus {
+    color: var(--white-background-color);
+    border-color: transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: var(--pressed-state-color);
+}
+
+/** Style for cards in category */
+.category-list {
+    display: flex;
+    gap: 48px 24px;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    flex-basis: calc((100% - 48px) / 3);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.category-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    transition: box-shadow var(--typical-transition);
+}
+
+/** Overlay style */
+.category-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-brand-color);
+
+    transform: translateY(100%);
+    transition: transform var(--typical-transition);
+}
+
+.overlay-text {
+    display: flex;
+    justify-content: center;
+    padding: 40px 32px;
+    color: var(--accent-color);
+}
+
+/** Hover and focus for overlay in filter section */
+.category-link:hover .category-overlay,
+.category-link:focus .category-overlay {
+    transform: translateY(0);
+}
+
+/** Hover and focus for socials in filter section */
+.category-link:hover,
+.category-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.category-card {
+    flex-grow: 1;
+    padding-top: 32px;
+    padding-right: auto;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    border-right: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
+}
+
+/**=============== Footer section ===============*/
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--dark-color);
+}
+
+.footer-container {
+    display: flex;
+}
+
+/** Footer logo */
+.footer .logo-link {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+/** Color for logo (tag span) */
+.footer-span {
+    color: var(--light-color);
+}
+
+/** Footer information */
+.footer-information {
+    display: flex;
+    flex-direction: column;
+    margin-right: 120px;
+    max-width: 264px;
+}
+
+
+.footer-slogan {
+    color: var(--light-color);
+}
+
+
+.social-text {
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: var(--light-color);
+}
+
+/** Footer social */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+
+.footer-social .social-list {
+    display: flex;
+    gap: 16px;
+}
+
+/** Hover and focus for socials in footer section */
+.social-link.social-footer:hover,
+.social-link.social-footer:focus {
+    background-color: var(--success-color);
+}
+
+/** Footer subscribe */
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.subscribe-text {
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: var(--light-color);
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-form-field {
+    margin-right: 24px;
+    width: 100%;
+}
+
+.subscribe-form-input {
+    padding: 8px 16px;
+    width: 100%;
+    height: 40px;
+
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+    border: 1px solid var(--white-background-color);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--white-background-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.subscribe-form-input::placeholder {
+    color: var(--white-background-color);
+}
+
+/** Button (mail) in footer section */
+.subscribe-form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 16px;
+
+    background-color: var(--primary-brand-color);
+    color: var(--white-background-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+.subscribe-form-icon {
+    fill: var(--white-background-color);
+}
+
+/** Hover and focus for button (mail) in footer section */
+.subscribe-form-submit:hover,
+.subscribe-form-submit:focus {
+    background-color: var(--pressed-state-color);
+}
+
+/**=============== Backdrop ===============*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-overlay-color);
+
+    opacity: 1;
+
+    transition:
+        opacity var(--typical-transition),
+        visibility var(--typical-transition);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 408px;
+    min-height: 576px;
+    padding: 24px;
+    padding-top: 72px;
+
+    background-color: var(--modal-background-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: transform var(--typical-transition);
+}
+
+/** Modal button (close) */
+.modal-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+
+    background-color: var(--accent-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    transition:
+        background-color var(--typical-transition),
+        border-color var(--typical-transition);
+}
+
+.modal-button-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: var(--dark-color);
+
+    transition: fill var(--typical-transition);
+}
+
+/** Hover and focus for modal button (close) */
+.modal-button:hover,
+.modal-button:focus {
+    background-color: var(--pressed-state-color);
+    border-color: transparent;
+}
+
+/** Hover and focus for modal icon (close)  */
+.modal-button:hover .modal-button-icon,
+.modal-button:focus .modal-button-icon {
+    fill: var(--white-background-color);
+}
+
+/**=============== Modal form ===============*/
+.modal-text {
+    margin-bottom: 16px;
+    text-align: center;
+
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.modal-form-field {
+    margin-bottom: 8px;
+}
+
+.modal-form-description {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text-color);
+}
+
+.modal-form-input-wrapper {
+    position: relative;
+    display: block;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+
+    color: var(--dark-color);
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 4px;
+
+    transition: border-color var(--typical-transition);
+}
+
+/** Focus for modal input */
+.modal-form-input:focus {
+    border-color: var(--primary-brand-color);
+    outline: none;
+}
+
+/** Transition for modal icon */
+.input-icon {
+    transition: fill var(--typical-transition);
+}
+
+/** Focus for modal icon*/
+.modal-form-input:focus+.input-icon {
+    fill: var(--primary-brand-color);
+}
+
+/** Icon from modal */
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: var(--dark-color);
+}
+
+/** Textarea from modal */
+label:nth-last-child(3) {
+    margin-bottom: 16px;
+}
+
+.modal-form-message {
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+    resize: none;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+
+    color: var(--dark-color);
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 4px;
+
+    transition: border-color var(--typical-transition);
+}
+
+.modal-form-message::placeholder {
+    color: var(--modal-overlay-color);
+}
+
+/** Focus for modal textarea */
+.modal-form-message:focus {
+    border-color: var(--primary-brand-color);
+    outline: none;
+}
+
+/** Policy from modal */
+.modal-form-policy-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text-color);
+}
+
+/** Custom checkbox from modal */
+.modal-form-policy-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 2px;
+    cursor: pointer;
+
+    transition:
+        background-color var(--typical-transition),
+        background-image var(--typical-transition);
+}
+
+/** Active checkbox modal form */
+.modal-form-policy:checked+.modal-form-policy-checkbox {
+    background-color: var(--pressed-state-color);
+    border-color: var(--pressed-state-color);
+}
+
+/** Іcon in checkbox modal form*/
+.checkbox-icon {
+    opacity: 0;
+    fill: var(--light-color);
+}
+
+/** Active icon in checkbox modal form */
+.modal-form-policy:checked+.modal-form-policy-checkbox>.checkbox-icon {
+    opacity: 1;
+}
+
+.modal-form-policy-field>a {
+    text-decoration: underline;
+    color: #4D5AE5;
+}
+
+/** Button in modal form (send) */
+.modal-form-submit {
+    align-self: center;
+    padding: 16px 32px;
+
+    min-width: 169px;
+    min-height: 56px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary-brand-color);
+    color: var(--white-background-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+/** Hover and focus for button in hero section */
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+    background-color: var(--pressed-state-color);
+}
