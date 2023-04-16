@@ -1,0 +1,62 @@
+/**=============== Additional styles ===============*/
+@media screen and (max-width: 1157px) {
+
+    /** Additional class for sections  */
+    .section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+    /** Additional container class */
+    .container {
+        max-width: 768px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/**=============== Header section ===============*/
+/** Delete mobile menu */
+.mobile-menu-open,
+.mobile-menu {
+    display: none;
+}
+
+/** Logo style in the header */
+.header .logo-link {
+    margin-right: 120px;
+}
+
+/** Navigation style */
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+/** Current page line */
+.current::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--pressed-state-color);
+}
+
+/** Contacts style */
+.contacts-list {
+    display: block;
+}
+
+@media screen and (max-width: 1157px) {
+    .contact-item:first-child a {
+        margin-bottom: 12px;
+    }
+}

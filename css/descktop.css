@@ -1,0 +1,32 @@
+/**=============== Additional styles ===============*/
+/** Additional class for sections  */
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/** Additional container class */
+.container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**=============== Header section ===============*/
+/** Logo style in the header */
+.header .logo-link {
+    margin-right: 76px;
+}
+
+/** Contacts style */
+.contacts-list {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-link {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}

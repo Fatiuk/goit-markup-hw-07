@@ -1,0 +1,376 @@
+:root {
+    --primary-brand-color: #4D5AE5;
+    --pressed-state-color: #404BBF;
+    --dark-color: #2E2F42;
+    --success-color: #31D0AA;
+    --text-color: #434455;
+    --subtle-text-color: #8E8F99;
+    --accent-color: #E7E9FC;
+    --light-color: #F4F4FD;
+    --modal-overlay-color: rgba(46, 47, 66, 0.4);
+    --hero-background-color: rgba(46, 47, 66, 0.7);
+    --white-background-color: #FFFFFF;
+    --modal-background-color: #FCFCFC;
+
+    --typical-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/** Body style */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white-background-color);
+}
+
+/** Delete text decoration */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/**=============== Text style guide ===============*/
+/** Header 1 */
+.hero-title {
+    width: 496px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--white-background-color);
+}
+
+/** Header 2 */
+.header-two {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--dark-color);
+}
+
+/** Header 3 */
+.header-three {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--dark-color);
+}
+
+/** Large text style */
+.text-l {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+/** Medium text style */
+.text-m {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+/** Small text style */
+.text-s {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text-color);
+}
+
+/**=============== Additional styles ===============*/
+@media screen and (max-width: 767px) {
+
+    /** Additional class for sections  */
+    .section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+    /** Additional container class */
+    .container {
+        max-width: 428px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/** Additional hidden class  */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/** Global style for buttons */
+button {
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+/** Style for socials in team and footer section  */
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-brand-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+/** Color for social icons */
+.social-icon {
+    fill: var(--light-color);
+}
+
+/**=============== Header section ===============*/
+header {
+    border-bottom: 1px solid var(--accent-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+/** Default logo style */
+.logo-link {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-brand-color);
+}
+
+/** Color for logo (tag span) */
+.header-span {
+    color: var(--dark-color);
+}
+
+/** Navigation style */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+/** Navigation hide (none for mobile) */
+@media screen and (max-width: 767px) {
+    .nav-list {
+        display: none;
+    }
+}
+
+.nav-link {
+    position: relative;
+
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    transition: color var(--typical-transition);
+}
+
+/** Current color for navigation */
+.current {
+    color: var(--pressed-state-color);
+}
+
+/** Contacts hide (none for mobile) */
+@media screen and (max-width: 767px) {
+    .contacts-list {
+        display: none;
+    }
+}
+
+.contact-link {
+    display: block;
+    transition: color var(--typical-transition);
+}
+
+/** Hover and focus for navigation and contacts */
+.nav-link:hover,
+.nav-link:focus,
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--pressed-state-color);
+}
+
+/** Button in header (open mobile menu) */
+.mobile-menu-open {
+    border: none;
+    line-height: 0;
+    background-color: transparent;
+}
+
+/**=============== Modile menu ===============*/
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-background-color);
+    transform: translateY(-100%);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    overflow-y: scroll;
+
+    transition: transform var(--typical-transition);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.mobile-menu-container {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+
+/** Button in mobile menu (close) */
+.mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    transition:
+        background-color var(--typical-transition),
+        border-color var(--typical-transition);
+}
+
+.mobile-menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/** Hover and focus for button in mobile menu (close) */
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+    background-color: var(--pressed-state-color);
+    border-color: transparent;
+}
+
+/** Hover and focus for mobile menu icon (close) */
+.mobile-menu-close:hover .mobile-menu-icon,
+.mobile-menu-close:focus .mobile-menu-icon {
+    fill: var(--white-background-color);
+}
+
+/** Navigation in mobile menu */
+.nav-mobile-list {
+    margin-bottom: 284px;
+}
+
+.nav-mobile-link {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: start;
+
+    transition: color var(--typical-transition);
+}
+
+/** Contacts in mobile menu */
+.contact-mobile-link {
+    display: block;
+
+    transition: color var(--typical-transition);
+}
+
+.mobile-tel {
+    margin-bottom: 40px;
+    color: var(--primary-brand-color);
+}
+
+.mobile-email {
+    margin-bottom: 48px;
+    color: var(--text-color);
+}
+
+/** Socials in mobile menu */
+.social-mobile-list {
+    display: flex;
+    flex-wrap: wrap;
+    /*!  */
+    gap: 7.6vw;
+}
+
+/** Hover and focus for mobile menu */
+.nav-mobile-link:hover,
+.nav-mobile-link:focus,
+.contact-mobile-link:hover,
+.contact-mobile-link:focus {
+    color: var(--pressed-state-color);
+}
