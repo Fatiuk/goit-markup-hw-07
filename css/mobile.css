@@ -53,7 +53,6 @@ img {
 /**=============== Text style guide ===============*/
 /** Header 1 */
 .hero-title {
-    width: 496px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -85,7 +84,6 @@ img {
 /** Large text style */
 .text-l {
     font-weight: 500;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text-color);
@@ -93,8 +91,6 @@ img {
 
 /** Medium text style */
 .text-m {
-    font-weight: 400;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text-color);
@@ -102,7 +98,6 @@ img {
 
 /** Small text style */
 .text-s {
-    margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.04em;
@@ -181,9 +176,6 @@ header {
 
 /** Default logo style */
 .logo-link {
-    padding-top: 24px;
-    padding-bottom: 24px;
-
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -191,6 +183,12 @@ header {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--primary-brand-color);
+}
+
+/** Expanding the click-zone */
+.header .logo-link {
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 /** Color for logo (tag span) */
@@ -210,7 +208,7 @@ header {
     align-items: center;
 }
 
-/** Navigation hide (none for mobile) */
+/** Hidden navigation (none for mobile) */
 @media screen and (max-width: 767px) {
     .nav-list {
         display: none;
@@ -232,7 +230,7 @@ header {
     color: var(--pressed-state-color);
 }
 
-/** Contacts hide (none for mobile) */
+/** Hidden contacts (none for mobile) */
 @media screen and (max-width: 767px) {
     .contacts-list {
         display: none;
@@ -363,8 +361,7 @@ header {
 .social-mobile-list {
     display: flex;
     flex-wrap: wrap;
-    /*!  */
-    gap: 7.6vw;
+    gap: 56px;
 }
 
 /** Hover and focus for mobile menu */
@@ -373,4 +370,688 @@ header {
 .contact-mobile-link:hover,
 .contact-mobile-link:focus {
     color: var(--pressed-state-color);
+}
+
+/**=============== Hero section ===============*/
+.hero {
+    max-width: 428px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: var(--dark-color);
+    background-image: linear-gradient(to right,
+            var(--hero-background-color),
+            var(--hero-background-color)),
+        url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/** Title in hero section (mobile) */
+@media screen and (max-width: 767px) {
+    .hero-title {
+        max-width: 320px;
+        margin-bottom: 72px;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+    }
+}
+
+/** Button in hero section */
+.hero-button {
+    padding: 16px 32px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary-brand-color);
+    color: var(--white-background-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+/** Hover and focus for button in hero section */
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--pressed-state-color);
+}
+
+/**=============== Features section ===============*/
+@media screen and (max-width: 767px) {
+    .features-item:not(:last-child) {
+        margin-bottom: 72px;
+    }
+}
+
+/** Hidden icons in feature (none for mobile and tablet) */
+@media screen and (max-width: 1157px) {
+    .features-thumb {
+        display: none;
+    }
+}
+
+.features-name {
+    margin-bottom: 8px;
+}
+
+/**=============== Work section ===============*/
+/** Hidden icons in feature (none for mobile and tablet) */
+@media screen and (max-width: 1157px) {
+    .work.section {
+        display: none;
+    }
+}
+
+/**=============== Team section ===============*/
+.team {
+    background-color: var(--light-color);
+}
+
+.team-title {
+    margin-bottom: 72px;
+}
+
+/** Style for cards in team section */
+@media screen and (max-width: 767px) {
+    .team-item {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 72px;
+    }
+}
+
+.team-item {
+    max-width: 264px;
+    height: 100%;
+    flex-grow: 1;
+    text-align: center;
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    background-color: var(--white-background-color);
+}
+
+.team-name {
+    margin-bottom: 8px;
+}
+
+.team-text {
+    margin-bottom: 8px;
+}
+
+.team-card {
+    padding-top: 32px;
+    padding-right: 16px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+}
+
+.team-item .social-list {
+    display: flex;
+    gap: 24px;
+}
+
+/** Hover and focus for socials in team section */
+.social-link.social-team:hover,
+.social-link.social-team:focus {
+    background-color: var(--pressed-state-color);
+}
+
+/**=============== Customers section ===============*/
+.customer-title {
+    margin-bottom: 72px;
+}
+
+.customer-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px 16px;
+}
+
+.customer-item {
+    flex-basis: calc((100% - 16px)/2);
+}
+
+.customer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: 1px solid var(--subtle-text-color);
+    border-radius: 4px;
+
+    transition: border-color var(--typical-transition);
+}
+
+/** Hover and focus for border in customers section */
+.customer-link:hover,
+.customer-link:focus {
+    border-color: var(--pressed-state-color);
+}
+
+.customer-icon {
+    fill: var(--subtle-text-color);
+
+    transition: fill var(--typical-transition);
+}
+
+/** Hover and focus for icons in customers section */
+.customer-link:hover .customer-icon,
+.customer-link:focus .customer-icon {
+    fill: var(--pressed-state-color);
+}
+
+/**=============== Filter section ===============*/
+.filter {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* ! */
+    justify-content: center;
+    margin-bottom: 48px;
+    gap: 16px 24px;
+}
+
+/** Button in filter section */
+.filter-button {
+    padding: 12px 24px;
+
+    border-color: var(--accent-color);
+    background-color: var(--light-color);
+    color: var(--primary-brand-color);
+
+    transition:
+        color var(--typical-transition),
+        border-color var(--typical-transition),
+        box-shadow var(--typical-transition),
+        background-color var(--typical-transition);
+}
+
+/** Hover and focus for button in filter section */
+.filter-button:hover,
+.filter-button:focus {
+    color: var(--white-background-color);
+    border-color: transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: var(--pressed-state-color);
+}
+
+/** Style for cards in category */
+@media screen and (max-width: 767px) {
+    .category-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+.category-item {
+    border-radius: 0px 0px 4px 4px;
+}
+
+.category-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    transition: box-shadow var(--typical-transition);
+}
+
+.category-card {
+    flex-grow: 1;
+    padding-top: 32px;
+    padding-right: auto;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    border-right: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
+}
+
+.category-name {
+    margin-bottom: 8px;
+    color: var(--dark-color);
+}
+
+/** Overlay style */
+.category-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-brand-color);
+
+    transform: translateY(100%);
+    transition: transform var(--typical-transition);
+}
+
+.overlay-text {
+    padding: 40px 32px;
+    color: var(--accent-color);
+}
+
+/** Hover and focus for overlay in filter section */
+.category-link:hover .category-overlay,
+.category-link:focus .category-overlay {
+    transform: translateY(0);
+}
+
+/** Hover and focus for socials in filter section */
+.category-link:hover,
+.category-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+/**=============== Footer section ===============*/
+.footer {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-color: var(--dark-color);
+}
+
+.footer-container {
+    display: flex;
+}
+
+@media screen and (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 72px;
+    }
+}
+
+/** Footer logo */
+.footer .logo-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/** Color for logo (tag span) */
+.footer-span {
+    color: var(--light-color);
+}
+
+/** Footer information container*/
+.footer-information {
+    max-width: 268px;
+
+}
+
+.footer-slogan {
+    color: var(--light-color);
+}
+
+/** Footer social container */
+.social-text {
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--light-color);
+}
+
+.footer-social .social-list {
+    display: flex;
+    gap: 16px;
+}
+
+/** Hover and focus for socials in footer section */
+.social-link.social-footer:hover,
+.social-link.social-footer:focus {
+    background-color: var(--success-color);
+}
+
+/** Footer subscribe container */
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.subscribe-text {
+    margin-bottom: 16px;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form-input {
+    padding: 8px 16px;
+    width: 100%;
+    height: 40px;
+
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+    border: 1px solid var(--white-background-color);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--white-background-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+@media screen and (max-width: 767px) {
+    .subscribe-form-input {
+        margin-bottom: 16px;
+    }
+}
+
+.subscribe-form-input::placeholder {
+    color: var(--white-background-color);
+}
+
+/** Button (mail) in footer section */
+.subscribe-form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 16px;
+
+    background-color: var(--primary-brand-color);
+    color: var(--white-background-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+@media screen and (max-width: 767px) {
+    .subscribe-form-submit {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.subscribe-form-icon {
+    fill: var(--white-background-color);
+}
+
+/** Hover and focus for button (mail) in footer section */
+.subscribe-form-submit:hover,
+.subscribe-form-submit:focus {
+    background-color: var(--pressed-state-color);
+}
+
+/**=============== Backdrop ===============*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-overlay-color);
+
+    opacity: 1;
+
+    transition:
+        opacity var(--typical-transition),
+        visibility var(--typical-transition);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+/**=============== Modal section ===============*/
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    min-width: 300px;
+    padding: 16px;
+    padding-top: 72px;
+
+    background-color: var(--modal-background-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: transform var(--typical-transition);
+}
+
+/** Modal button (close) */
+.modal-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+
+    background-color: var(--accent-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    transition:
+        background-color var(--typical-transition),
+        border-color var(--typical-transition);
+}
+
+.modal-button-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: var(--dark-color);
+
+    transition: fill var(--typical-transition);
+}
+
+/** Hover and focus for modal button (close) */
+.modal-button:hover,
+.modal-button:focus {
+    background-color: var(--pressed-state-color);
+    border-color: transparent;
+}
+
+/** Hover and focus for modal icon (close)  */
+.modal-button:hover .modal-button-icon,
+.modal-button:focus .modal-button-icon {
+    fill: var(--white-background-color);
+}
+
+/**=============== Modal form ===============*/
+.modal-text {
+    margin-bottom: 16px;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-field {
+    margin-bottom: 8px;
+}
+
+.modal-form-description {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.modal-form-input-wrapper {
+    position: relative;
+    display: block;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 34px;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+
+    color: var(--dark-color);
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 4px;
+
+    transition: border-color var(--typical-transition);
+}
+
+/** Focus for modal input */
+.modal-form-input:focus {
+    border-color: var(--primary-brand-color);
+    outline: none;
+}
+
+/** Transition for modal icon */
+.input-icon {
+    transition: fill var(--typical-transition);
+}
+
+/** Focus for modal icon*/
+.modal-form-input:focus+.input-icon {
+    fill: var(--primary-brand-color);
+}
+
+/** Icon from modal */
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: var(--dark-color);
+}
+
+/** Textarea from modal */
+label:nth-last-child(3) {
+    margin-bottom: 18px;
+}
+
+.modal-form-message {
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+    resize: none;
+
+    color: var(--dark-color);
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 4px;
+
+    transition: border-color var(--typical-transition);
+}
+
+.modal-form-message::placeholder {
+    color: var(--modal-overlay-color);
+}
+
+/** Focus for modal textarea */
+.modal-form-message:focus {
+    border-color: var(--primary-brand-color);
+    outline: none;
+}
+
+/** Policy from modal */
+.modal-form-policy-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 767px) {
+    .modal-form-policy-field {
+        flex-wrap: wrap;
+    }
+}
+
+/** Custom checkbox from modal */
+.modal-form-policy-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 2px;
+    cursor: pointer;
+
+    transition:
+        background-color var(--typical-transition),
+        background-image var(--typical-transition);
+}
+
+/** Active checkbox modal form */
+.modal-form-policy:checked+.modal-form-policy-checkbox {
+    background-color: var(--pressed-state-color);
+    border-color: var(--pressed-state-color);
+}
+
+/** Іcon in checkbox modal form*/
+.checkbox-icon {
+    opacity: 0;
+    fill: var(--light-color);
+}
+
+/** Active icon in checkbox modal form */
+.modal-form-policy:checked+.modal-form-policy-checkbox>.checkbox-icon {
+    opacity: 1;
+}
+
+.modal-form-policy-field>a {
+    text-decoration: underline;
+    color: #4D5AE5;
+}
+
+@media screen and (max-width: 767px) {
+    .modal-form-policy-field>a {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/** Button in modal form (send) */
+.modal-form-submit {
+    align-self: center;
+    padding: 16px 32px;
+
+    min-width: 169px;
+    min-height: 56px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary-brand-color);
+    color: var(--white-background-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+/** Hover and focus for button in hero section */
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+    background-color: var(--pressed-state-color);
 }

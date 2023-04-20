@@ -18,7 +18,7 @@
 }
 
 /**=============== Header section ===============*/
-/** Delete mobile menu */
+/** Hidden mobile menu (none for tablet and desktop) */
 .mobile-menu-open,
 .mobile-menu {
     display: none;
@@ -59,4 +59,117 @@
     .contact-item:first-child a {
         margin-bottom: 12px;
     }
+}
+
+/**=============== Hero section ===============*/
+.hero {
+    max-width: 768px;
+}
+
+/** Title in hero section (tablet) */
+@media screen and (max-width: 1157px) {
+    .hero-title {
+        max-width: 496px;
+        margin-bottom: 36px;
+    }
+}
+
+/**=============== Features section ===============*/
+@media screen and (max-width: 1157px) {
+    .features-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+}
+
+.features-item {
+    flex-basis: calc((100% - 24px)/2);
+}
+
+/**=============== Team section ===============*/
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 64px 24px;
+}
+
+/**=============== Customers section ===============*/
+.customer-list {
+    gap: 72px 24px;
+}
+
+.customer-item {
+    max-width: 168px;
+}
+
+/**=============== Filter section ===============*/
+.filter {
+    padding-top: 64px;
+    padding-bottom: 96px;
+}
+
+.filter-list {
+    margin-bottom: 64px;
+}
+
+/** Style for cards in category thumb*/
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+}
+
+.category-item {
+    flex-basis: calc((100% - 24px) / 2);
+}
+
+/**=============== Footer section ===============*/
+.footer-container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1157px) {
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+}
+
+/** Footer logo */
+.footer .logo-link {
+    text-align: start;
+}
+
+/** Footer information container*/
+.footer-information {
+    max-width: 264px;
+}
+
+.social-text {
+    text-align: start;
+}
+
+/** Footer subscribe container */
+.subscribe-text {
+    text-align: start;
+}
+
+.subscribe-form {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.subscribe-form-input {
+    min-width: 264px;
+}
+
+/**=============== Modal section ===============*/
+.modal {
+    min-width: 408px;
+    padding: 24px;
+    padding-top: 72px;
 }

@@ -30,3 +30,123 @@
     padding-top: 24px;
     padding-bottom: 24px;
 }
+
+/**=============== Hero section ===============*/
+.hero {
+    max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+}
+
+/** Title in hero section (tablet) */
+.hero-title {
+    max-width: 496px;
+    margin-bottom: 48px;
+}
+
+/**=============== Features section ===============*/
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.features-item {
+    flex-basis: calc((100% - 72px)/4);
+}
+
+.features-thumb {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-radius: 4px;
+    background-color: var(--light-color);
+}
+
+/** Resize text in feature section (desktop) */
+.features-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.features-text {
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+/**=============== Work section ===============*/
+.work {
+    padding-top: 0;
+}
+
+.work-title {
+    margin-bottom: 72px;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.work-item {
+    flex-basis: calc((100% - 48px)/3);
+}
+
+/**=============== Customers section ===============*/
+.customer-list {
+    gap: 24px;
+}
+
+/**=============== Filter section ===============*/
+.filter {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.filter-list {
+    margin-bottom: 72px;
+}
+
+/** Style for cards in category thumb*/
+.category-list {
+    gap: 48px 24px;
+}
+
+.category-item {
+    flex-basis: calc((100% - 48px) / 3);
+}
+
+/**=============== Footer section ===============*/
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer-container {
+    flex-wrap: nowrap;
+}
+
+/** Footer information container*/
+.footer-information {
+    margin-right: 120px;
+}
+
+.footer-social {
+    margin-right: 80px;
+}
+
+/**=============== Modal form ===============*/
+.modal-form-input {
+    padding-left: 38px;
+}
+
+/** Textarea from modal */
+label:nth-last-child(3) {
+    margin-bottom: 16px;
+}
