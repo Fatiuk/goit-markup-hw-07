@@ -224,25 +224,49 @@
           <h2 class="work-title header-two">What are we doing</h2>
           <ul class="work-list">
             <li class="work-item">
-              <img
-                src="./images/computer.jpg"
-                alt="Computer version of the site"
-                width="360"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="./images/computer.jpg 1x, ./images/computer@2x.jpg 2x"
+                />
+                <img
+                  src="./images/computer.jpg"
+                  alt="Computer version of the website"
+                  width="360"
+                />
+              </picture>
             </li>
             <li class="work-item">
-              <img
-                src="./images/mobile-app.jpg"
-                alt="Mobile application"
-                width="360"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/mobile-app.jpg    1x,
+                    ./images/mobile-app@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/mobile-app.jpg"
+                  alt="Mobile application"
+                  width="360"
+                />
+              </picture>
             </li>
             <li class="work-item">
-              <img
-                src="./images/mobile-site.jpg"
-                alt="Mobile version of the site"
-                width="360"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/mobile-website.jpg    1x,
+                    ./images/mobile-website@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/mobile-website.jpg"
+                  alt="Mobile version of the website"
+                  width="360"
+                />
+              </picture>
             </li>
           </ul>
         </div>
