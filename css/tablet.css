@@ -61,6 +61,14 @@
     }
 }
 
+@media screen and (max-width: 1157px) {
+    .contact-link {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.04em;
+    }
+}
+
 /**=============== Hero section ===============*/
 .hero {
     /* 768px > + */
@@ -97,7 +105,19 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     flex-basis: calc((100% - 24px)/2);
 }
 
+.features-name {
+    text-align: start;
+}
+
 /**=============== Team section ===============*/
+@media screen and (max-width: 1157px) {
+    .team-container {
+        width: 582px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
 .team-list {
     display: flex;
     flex-wrap: wrap;
@@ -106,6 +126,14 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 }
 
 /**=============== Customers section ===============*/
+@media screen and (max-width: 1157px) {
+    .customer-container {
+        width: 582px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
 .customer-list {
     gap: 72px 24px;
 }
@@ -145,6 +173,9 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .footer-container {
         flex-wrap: wrap;
         gap: 72px 24px;
+        width: 582px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
 
