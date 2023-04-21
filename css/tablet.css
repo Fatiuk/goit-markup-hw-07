@@ -63,7 +63,17 @@
 
 /**=============== Hero section ===============*/
 .hero {
-    max-width: 768px;
+    /* 768px > + */
+    background-image: var(--bg-gradient), url(../images/hero.jpg);
+}
+
+/* 768px > + (2x)*/
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero {
+        background-image: var(--bg-gradient), url(../images/hero@2x.jpg)
+    }
 }
 
 /** Title in hero section (tablet) */

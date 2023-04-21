@@ -11,6 +11,9 @@
     --hero-background-color: rgba(46, 47, 66, 0.7);
     --white-background-color: #FFFFFF;
     --modal-background-color: #FCFCFC;
+    --bg-gradient: linear-gradient(to right,
+            var(--hero-background-color),
+            var(--hero-background-color));
 
     --typical-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -348,8 +351,15 @@ header {
 }
 
 .mobile-tel {
+    text-align: start;
     margin-bottom: 40px;
     color: var(--primary-brand-color);
+}
+
+@media screen and (max-width: 427px) {
+    .mobile-tel {
+        font-size: 24px;
+    }
 }
 
 .mobile-email {
@@ -364,6 +374,12 @@ header {
     gap: 56px;
 }
 
+@media screen and (max-width: 427px) {
+    .social-mobile-list {
+        gap: 26px;
+    }
+}
+
 /** Hover and focus for mobile menu */
 .nav-mobile-link:hover,
 .nav-mobile-link:focus,
@@ -374,20 +390,42 @@ header {
 
 /**=============== Hero section ===============*/
 .hero {
-    max-width: 428px;
     padding-top: 112px;
     padding-bottom: 112px;
     margin-right: auto;
     margin-left: auto;
 
     background-color: var(--dark-color);
-    background-image: linear-gradient(to right,
-            var(--hero-background-color),
-            var(--hero-background-color)),
-        url(../images/hero.jpg);
+    /* 0 > 427px */
+    background-image: var(--bg-gradient), url(../images/hero-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+/* 0 > 427px (2x)*/
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 427px),
+screen and (min-resolution: 192dpi) and (max-width: 427px),
+screen and (min-resolution: 2dppx) and (max-width: 427px) {
+    .hero {
+        background-image: var(--bg-gradient), url(../images/hero-mobile@2x.jpg)
+    }
+}
+
+/* 428px > 727px */
+@media screen and (min-width: 428px) and (max-width: 767px) {
+    .hero {
+        background-image: var(--bg-gradient), url(../images/hero-tablet.jpg);
+    }
+}
+
+/* 428px > 727px (2x)*/
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 428px) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (min-width: 428px) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (min-width: 428px) and (max-width: 767px) {
+    .hero {
+        background-image: var(--bg-gradient), url(../images/hero-tablet@2x.jpg)
+    }
 }
 
 .hero-container {
@@ -489,13 +527,12 @@ header {
 
 .team-card {
     padding-top: 32px;
-    padding-right: 16px;
     padding-bottom: 32px;
-    padding-left: 16px;
 }
 
 .team-item .social-list {
     display: flex;
+    justify-content: center;
     gap: 24px;
 }
 
@@ -561,7 +598,6 @@ header {
 .filter-list {
     display: flex;
     flex-wrap: wrap;
-    /* ! */
     justify-content: center;
     margin-bottom: 48px;
     gap: 16px 24px;
@@ -882,6 +918,11 @@ header {
     fill: var(--white-background-color);
 }
 
+/** No-scroll for modal */
+.no-scroll {
+    overflow-y: hidden;
+}
+
 /**=============== Modal form ===============*/
 .modal-text {
     margin-bottom: 16px;
@@ -1050,7 +1091,7 @@ label:nth-last-child(3) {
     transition: background-color var(--typical-transition);
 }
 
-/** Hover and focus for button in hero section */
+/** Hover and focus for button in modal section */
 .modal-form-submit:hover,
 .modal-form-submit:focus {
     background-color: var(--pressed-state-color);
